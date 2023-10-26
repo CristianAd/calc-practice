@@ -1,0 +1,53 @@
+*{
+    background-color: grey;
+}
+
+
+html, body{
+    margin: 0;
+}
+
+.calcAppContainer{
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    border: 1px solid beige;
+    flex-direction: column;
+    align-items: center;
+    height: 30rem
+}
+
+#buttonZone{
+    display: flex;
+    
+    height: 25rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 1px solid black;
+   
+}
+#buttonZone div{
+    border: 1px solid blueviolet;
+    width: 10rem;
+    height: 2.5rem;
+ 
+     
+}
+
+#buttonZone > :first-child {
+    display: flex;
+    height: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+ 
+
+#operadoresA span {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid blueviolet;
+    text-align: center;
+     
+  }
+  
