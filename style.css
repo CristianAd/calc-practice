@@ -1,5 +1,6 @@
 *{
     background-color: grey;
+    font-family: sans-serif;
 }
 
 
@@ -10,44 +11,71 @@ html, body{
 .calcAppContainer{
     display: flex;
     margin: 1rem;
-    justify-content: center;
+    flex-wrap: wrap;
+   padding: 1rem;
     border: 1px solid beige;
     flex-direction: column;
     align-items: center;
-    height: 30rem
+    height: 100%;
 }
 
 #buttonZone{
     display: flex;
     
-    height: 25rem;
+    height: 100%;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 1rem;
     border: 1px solid black;
+    align-items: center;
    
 }
 #buttonZone div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
     border: 1px solid blueviolet;
-    width: 10rem;
-    height: 2.5rem;
- 
+    width: 5rem;
+    height: 5rem;
+    background-image: radial-gradient(circle at 12.5% 12.5%, #e8f927 0, #cefa29 10%, #b2fa2f 20%, #91f837 30%, #68f642 40%, #1ef34e 50%, #00ef5b 60%, #00ec6b 70%, #00e87b 80%, #00e48d 90%, #00e1a0 100%);
+    cursor: pointer;
      
 }
 
-#buttonZone > :first-child {
+#operadoresA {
     display: flex;
-    height: 3rem;
+    height: calc(100% - 15rem);
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    align-items: center;
   }
   
  
 
 #operadoresA span {
+    display: flex;
     width: 3rem;
     height: 3rem;
     border: 1px solid blueviolet;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle at 12.5% 12.5%, #dbbc3d 0, #e2b134 10%, #e7a62b 20%, #ec9925 30%, #f08b20 40%, #f37b1f 50%, #f56a21 60%, #f75728 70%, #f94230 80%, #fa2739 90%, #fa0044 100%);
+    margin: auto 0.2rem;
+    cursor: pointer;
      
   }
   
+  #screenZone{
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(circle at 12.5% 12.5%, #718bed 0, #1d6fe1 50%, #0056d5 100%);
+    width: calc(100% - 1rem);
+    height: 4rem;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    margin-top: 1rem;
+  }

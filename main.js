@@ -15,7 +15,7 @@ function construir(params) {
     
     const botonesCalc = nuevoCalcBtn.innerHTML = i
 
-   console.log(botonesCalc)
+ 
      
     
   }
@@ -26,10 +26,10 @@ function construir(params) {
 
 
 function crearOperadoresBtn() {
-    const operadoresAritmeticos = document.createElement("div");
+    const operadoresAritmeticos = document.createElement("section");
     operadoresAritmeticos.setAttribute("id", "operadoresA")
    
-    const operadores = ["+", "-", "*", "/"];
+    const operadores = ["+", "-", "*", "/", "C", "="];
   
     operadores.forEach((operador) => {
       const operadorElement = document.createElement("span");
@@ -46,3 +46,16 @@ function crearOperadoresBtn() {
 crearOperadoresBtn()
 
 window.onload = construir
+
+
+ 
+const operacionMath = document.querySelectorAll("#buttonZone span");
+
+operacionMath.forEach(elemento => {
+    elemento.addEventListener("click", () => {
+        console.log(elemento.textContent);
+    });
+});
+
+
+ 
