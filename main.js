@@ -1,61 +1,34 @@
-
-
 const buttonZone = document.getElementById("buttonZone");
- 
-function construir(params) {
 
-  const teclasCalc = document.createElement("div")
- 
-
+function construir() {
   for (let i = 0; i <= 9; i++) {
-
-
-    const calcBtn = document.createElement("div")
-    const nuevoCalcBtn = buttonZone.appendChild(calcBtn)
-    
-    const botonesCalc = nuevoCalcBtn.innerHTML = i
-
- 
-     
-    
+    const calcBtn = document.createElement("div");
+    calcBtn.textContent = i; // Establece el contenido de texto en el div
+    buttonZone.appendChild(calcBtn);
   }
-
-  
- 
 }
 
-
 function crearOperadoresBtn() {
-    const operadoresAritmeticos = document.createElement("section");
-    operadoresAritmeticos.setAttribute("id", "operadoresA")
-   
-    const operadores = ["+", "-", "*", "/", "C", "="];
-  
-    operadores.forEach((operador) => {
-      const operadorElement = document.createElement("span");
-      operadorElement.textContent = operador;
-      operadoresAritmeticos.appendChild(operadorElement);
-    });
-  
-    buttonZone.appendChild(operadoresAritmeticos);
-  }
-  
- 
-  
+  const operadores = ["+", "-", "*", "/"];
+  const operadoresAritmeticos = document.createElement("section");
+  operadoresAritmeticos.setAttribute("id", "operadoresA");
 
-crearOperadoresBtn()
+  operadores.forEach((operador) => {
+    const operadorElement = document.createElement("span");
+    operadorElement.textContent = operador;
+    operadoresAritmeticos.appendChild(operadorElement);
+  });
 
-window.onload = construir
+  buttonZone.appendChild(operadoresAritmeticos);
+}
 
+crearOperadoresBtn();
+construir(); // Llamar construir() después de crear operadores y números
 
- 
-const operacionMath = document.querySelectorAll("#buttonZone span");
+const operacionMath = document.querySelectorAll("#buttonZone span, #buttonZone div");
 
-operacionMath.forEach(elemento => {
-    elemento.addEventListener("click", () => {
-        console.log(elemento.textContent);
-    });
+operacionMath.forEach((elemento) => {
+  elemento.addEventListener("click", () => {
+    console.log(elemento.textContent);
+  });
 });
-
-
- 
